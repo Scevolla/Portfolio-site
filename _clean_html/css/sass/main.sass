@@ -22,7 +22,6 @@ body textarea:required:valid
 section,
 .main_head
 	position: relative
-	padding-top: 20px
 
 .main_head
 	min-height: 480px
@@ -184,7 +183,81 @@ $h: 3px
 		margin-right: 20px
 		border: 8px solid #fff
 		background-color: rgba(0,0,0,.1)
+		+animation-delay(0.5s)
 	p
 		margin: 0
 		text-transform: uppercase
+		+animation-delay(1s)
+
+section
+	padding: 70px 0 90px
+
+.section_header
+	text-align: center
+
+.section_header_title
+	font-size: 24px
+	text-transform: uppercase
+	margin: 0 0 15px
+
+.section_header_descr
+	position: relative
+	display: inline-block
+	font-size: 12px
+	text-transform: uppercase
+	font-weight: 600
+	margin-bottom: 130px
+	&:after
+		content: ''
+		position: absolute
+		left: 50%
+		top: 60px
+		margin-left: -75px
+		width: 150px
+		height: 1px		
+
+.section_about_content_title
+	margin-top: 0
+	margin-bottom: 35px
+	text-align: center
+	font-size: 12px
+	text-transform: uppercase
+	font-weight: 400
+
+.section_about_photo_wrapper
+	text-align: center
+	margin-bottom: 35px
+
+.section_about_photo
+	display: inline-block
+	max-width: 220px
+	border-radius: 50%
+
+.section_about p
+	margin-bottom: 25px
+
+.section_about_name
+	font-size: 13px
+	text-transform: uppercase
+	text-align: left
+	margin: 0 0 30px
+	color: #555
+
+.section_about_personal_info_ul,
+.section_about_social_btns_ul
+	margin: 0
+	padding: 0
+	list-style-type: none
+
+.section_about_personal_info_ul li
+	margin-bottom: 10px
+
+.section_about_social_btns_ul
+	margin-top: 25px
+
+.section_about_social_btns_ul li 
+	display: inline-block
+	font-size: 20px
+	padding: 0 3px
+
 

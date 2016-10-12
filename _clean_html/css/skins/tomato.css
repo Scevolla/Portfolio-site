@@ -1,7 +1,8 @@
 body {
   color: #222; }
 
-a {
+a,
+.section_about p:nth-child(even) {
   color: #FF6347; }
 
 p {
@@ -19,6 +20,15 @@ p {
 .main_color_bg {
   background-color: #222; }
 
+.bg_light {
+  background-color: #FAFAFA; }
+
+.bg_dark {
+  background-color: #222;
+  color: #fff; }
+  .bg_dark .section_header_descr:after {
+    background-color: #fff; }
+
 svg path {
   fill: #FAFAFA; }
 
@@ -34,3 +44,20 @@ svg path {
 .header_name_container p {
   color: #FAFAFA;
   letter-spacing: 5px; }
+
+.section_header_title {
+  letter-spacing: 1px; }
+
+.section_header_descr {
+  letter-spacing: 4px; }
+  .section_header_descr:after {
+    background-color: #222; }
+
+.section_about .section_content {
+  color: #888; }
+
+.section_about_content_title {
+  letter-spacing: 3px; }
+
+.section_about_name {
+  letter-spacing: 2px; }

@@ -10,6 +10,12 @@ $(document).ready(function() {
 		heightDetect();
 	});
 
+	$(".popup").magnificPopup({type:"image"});
+	$(".section_header").animated("fadeInUp", "fadeOutDown");
+	$(".section_about_center_col").animated("flipInY", "fadeOutDown");
+	$(".section_about_left_col").animated("fadeInLeft", "fadeOutDown");
+	$(".section_about_right_col").animated("fadeInRight", "fadeOutDown");
+
 	$(".toggle_mnu").click(function() {
 		$(".sandwich").toggleClass("active");
 	});
@@ -40,4 +46,7 @@ $(document).ready(function() {
 $(window).load(function() {
 	$('.loader_inner').fadeOut();
 	$('.loader').delay(400).fadeOut('slow');
+
+	$(".header_name_container h1").animated("fadeInDown", "fadeOutUp");
+	$(".header_name_container p").animated("fadeInUp", "fadeOutDown");
 });
