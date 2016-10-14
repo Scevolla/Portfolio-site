@@ -61,3 +61,29 @@ svg path {
 
 .section_about_name {
   letter-spacing: 2px; }
+
+.resume_content_title {
+  letter-spacing: 1px;
+  color: #222; }
+
+.resume_content_item_year {
+  background-color: #FF6347;
+  color: #fff; }
+
+.resume_content_item_title {
+  letter-spacing: 1px; }
+
+.portfolio_control_item {
+  letter-spacing: 2px;
+  color: #888; }
+
+.portfolio_control_item.active {
+  color: #fff;
+  border-bottom: 1px solid #FF6347; }
+
+.portfolio_item_overlay h3 {
+  color: #fff;
+  letter-spacing: 3px; }
+.portfolio_item_overlay a {
+  border-color: #FF6347;
+  color: #FF6347; }
