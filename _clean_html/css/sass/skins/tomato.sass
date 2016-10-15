@@ -16,7 +16,8 @@ a,
 .section_about p:nth-child(even)
 	color: $color
 
-p
+p,
+footer.footer
 	color: $text_color
 
 .color_element
@@ -99,3 +100,25 @@ svg
 	a
 		border-color: $color
 		color: $color
+
+.contacts_content_icon
+	color: $color
+
+.contacts_content_title
+	+kerning(3)
+
+.form-group
+	color: $text_color
+	+kerning(2)
+
+.main_form
+	input,
+	textarea
+		+kerning(2)
+	button
+		background-color: $color
+		+kerning(2)
+
+.text_danger
+	color: $color
+	

@@ -53,6 +53,10 @@ $(document).ready(function() {
 			menu.find('ul li').addClass('fadeInUp animated');
 		}		
 	});
+
+	$("input, select, textarea").jqBootstrapValidation();
+
+	$(".top_mnu ul a").mPageScroll2id();
 });
 
 $(window).load(function() {

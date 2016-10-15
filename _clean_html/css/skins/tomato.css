@@ -5,7 +5,8 @@ a,
 .section_about p:nth-child(even) {
   color: #FF6347; }
 
-p {
+p,
+footer.footer {
   color: #888; }
 
 .color_element {
@@ -86,4 +87,24 @@ svg path {
   letter-spacing: 3px; }
 .portfolio_item_overlay a {
   border-color: #FF6347;
+  color: #FF6347; }
+
+.contacts_content_icon {
+  color: #FF6347; }
+
+.contacts_content_title {
+  letter-spacing: 3px; }
+
+.form-group {
+  color: #888;
+  letter-spacing: 2px; }
+
+.main_form input,
+.main_form textarea {
+  letter-spacing: 2px; }
+.main_form button {
+  background-color: #FF6347;
+  letter-spacing: 2px; }
+
+.text_danger {
   color: #FF6347; }
