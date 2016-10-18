@@ -1,0 +1,81 @@
+body {
+  color: #222; }
+
+a,
+.color_element,
+.color_border,
+.section_about p:nth-child(even) {
+  color: #FF6347; }
+
+p,
+.footer {
+  color: #888; }
+
+.bg_light {
+  background-color: #FAFAFA; }
+
+.bg_dark {
+  background-color: #222;
+  color: #fff; }
+
+.header_logo_container svg path {
+  fill: #FAFAFA; }
+
+.button_menu {
+  background-color: #000; }
+
+.main_menu {
+  background-color: rgba(0, 0, 0, 0.85); }
+  .main_menu a {
+    color: #fff; }
+  .main_menu a:hover {
+    color: #FF6347;
+    background-color: rgba(255, 255, 255, 0.05); }
+
+.header_title_container h1.header_title_name {
+  color: #fff;
+  border-color: #fff;
+  background-color: rgba(0, 0, 0, 0.1); }
+.header_title_container p.header_title_descr {
+  color: #FAFAFA; }
+
+.section_header_descr:after {
+  background-color: #222; }
+
+.bg_dark .section_header_descr:after {
+  background-color: #fff; }
+
+.section_about .section_content {
+  color: #888; }
+
+.section_about_name {
+  color: #555; }
+
+.resume_content_title {
+  color: #222; }
+
+.resume_content_item_year {
+  background-color: #FF6347;
+  color: #fff; }
+
+.portfolio_control_item {
+  color: #888; }
+  .portfolio_control_item.active {
+    color: #fff;
+    border-bottom: 1px solid #FF6347; }
+
+.portfolio_item_overlay h3 {
+  color: #fff; }
+.portfolio_item_overlay a {
+  border-color: #FF6347;
+  color: #FF6347; }
+
+.contacts_content_icon {
+  color: #FF6347; }
+
+.contacts_form .form-group {
+  color: #888; }
+.contacts_form button {
+  background-color: #FF6347; }
+.contacts_form .text_danger {
+  color: #FF6347; }

@@ -1,5 +1,16 @@
 @import "bourbon/bourbon"
 
+@mixin kerning($kerning)
+	letter-spacing: $kerning + px
+
+///////////////////// GENERAL /////////////////////////
+
+ul,
+li
+	list-style-type: none
+	padding: 0
+	margin: 0
+
 body
 	font-family: "Raleway", sans-serif
 	font-weight: normal
@@ -16,16 +27,7 @@ body input:required:valid,
 body textarea:required:valid
 	color: green
 
-.hidden
-	display: none
-
-section,
-.main_head
-	position: relative
-
-.main_head
-	min-height: 480px
-	padding-top: 20px
+///////////////////// FIXED BLOCKS /////////////////////////
 
 .loader
 	background: none repeat scroll 0 0 #ffffff
@@ -51,16 +53,7 @@ section,
 		margin-top: -32px
 		margin-left: -32px
 
-.logo_container
-	float: left
-
-svg
-	height: 60px
-	width: 60px
-	position: relative
-	z-index: 10
-
-.toggle_mnu
+.button_menu
 	position: fixed
 	width: 60px
 	height: 60px
@@ -69,112 +62,55 @@ svg
 	z-index: 100
 	border: none
 
-$w: 34px
-$h: 3px
-
-.sandwich 
-	width: $w
-	height: $w
-	position: absolute
-	top: 12px
-	bottom: 0
-	left: 0
-	right: 0
-	margin: auto
-	z-index: 200
-	display: block
-	> span
-		display: block
-
-.sw-topper
-	position: relative
-	top: 0
-	width: $w 
-	height: $h
-	background: rgb(255, 255, 255)
-	border: none 
-	border-radius: 4px 4px 4px 4px
-	transition: transform 0.5s, top 0.2s
-
-/* transition-delay: 0.2s, 0s */
-
-.sw-bottom
-	position: relative
-	width: $w
-	height: $h
-	top: $h * 2
-	background: rgb(255, 255, 255)
-	border: none
-	border-radius: 4px 4px 4px 4px
-	transition: transform 0.5s, top 0.2s
-	transition-delay: 0.2s, 0s 
-
-.sw-footer
-	position: relative
-	width: $w
-	height: $h
-	top: $h * 4
-	background: rgb(255, 255, 255)
-	border: none
-	border-radius: 4px 4px 4px 4px
-	transition: all 0.5s
-	transition-delay: 0.1s 
-
-.sandwich.active 
-	.sw-topper
-		top: 10px
-		transform: rotate(140deg)
-	.sw-bottom
-		top: 7px
-		transform: rotate(-140deg)
-	.sw-footer
-		opacity: 0
-		top: 0
-		transform: rotate(180deg)
-
-.top_mnu
+.main_menu
 	position: fixed
 	width: 100%
 	height: 100%
-	background-color: rgba(0, 0, 0, .85)
 	z-index: 50
 	right: 0
 	top: 0
 	display: none
-	ul,
-	li
-		list-style-type: none
-		padding: 0
-		margin: 0
 	ul
 		margin-top: 160px
 		text-align: center
 		a
-			color: #fff
 			display: block
 			padding: 20px 0 21px 0
 			text-transform: uppercase
 			font-size: 12px
+			+kerning(4)
 
-.header_name_table
+///////////////////// HEADER /////////////////////////
+
+.header
+	position: relative
+	height: 100vh
+	min-height: 480px
+
+.header_logo_container
+	float: left
+	margin: 20px 0 0 20px
+	svg
+		height: 60px
+		width: 60px
+
+.header_title_table
 	display: table
 	position: absolute
 	top: 0
 	left: 0
 	width: 100%
 	height: 100%
-	z-index: 10
-	.header_name_cell
+	.header_title_cell
 		display: table-cell
 		text-align: center
 		vertical-align: middle
 
-.header_name_container
+.header_title_container
 	display: inline-block
 	+transition(all, 1s, ease)
-	h1
+	.header_title_name
 		display: inline-block
-		color: #fff
 		font-size: 2.8em
 		font-weight: bold
 		text-transform: uppercase
@@ -182,14 +118,17 @@ $h: 3px
 		margin-left: 20px
 		margin-right: 20px
 		border: 8px solid #fff
-		background-color: rgba(0,0,0,.1)
 		+animation-delay(0.5s)
-	p
+	.header_title_descr
 		margin: 0
 		text-transform: uppercase
+		+kerning(5)
 		+animation-delay(1s)
 
+///////////////////// SECTIONS GENERAL /////////////////////////
+
 section
+	position: relative
 	padding: 70px 0 90px
 
 .section_header
@@ -198,6 +137,7 @@ section
 .section_header_title
 	font-size: 24px
 	text-transform: uppercase
+	+kerning(1)
 	margin: 0 0 15px
 
 .section_header_descr
@@ -206,6 +146,7 @@ section
 	font-size: 12px
 	text-transform: uppercase
 	font-weight: 600
+	+kerning(4)
 	margin-bottom: 130px
 	&:after
 		content: ''
@@ -216,6 +157,8 @@ section
 		width: 150px
 		height: 1px		
 
+///////////////////// SECTION ABOUT /////////////////////////
+
 .section_about_content_title
 	margin-top: 0
 	margin-bottom: 35px
@@ -223,6 +166,7 @@ section
 	font-size: 12px
 	text-transform: uppercase
 	font-weight: 400
+	+kerning(3)
 
 .section_about_photo_wrapper
 	text-align: center
@@ -233,32 +177,27 @@ section
 	max-width: 220px
 	border-radius: 50%
 
-.section_about p
+.section_about_left_col p
 	margin-bottom: 25px
 
 .section_about_name
 	font-size: 13px
 	text-transform: uppercase
+	+kerning(2)
 	text-align: left
 	margin: 0 0 30px
-	color: #555
-
-.section_about_personal_info_ul,
-.section_about_social_btns_ul
-	margin: 0
-	padding: 0
-	list-style-type: none
 
 .section_about_personal_info_ul li
 	margin-bottom: 10px
 
-.section_about_social_btns_ul
+.social_buttons
 	margin-top: 25px
+	li 
+		display: inline-block
+		font-size: 20px
+		padding: 0 3px
 
-.section_about_social_btns_ul li 
-	display: inline-block
-	font-size: 20px
-	padding: 0 3px
+///////////////////// SECTION RESUME /////////////////////////
 
 .resume_content_col_left
 	text-align: right
@@ -271,6 +210,7 @@ section
 	font-size: 16px
 	font-weight: 600
 	text-transform: uppercase
+	+kerning(1)
 	margin: 30px 0 35px 0
 
 .resume_content_icon
@@ -290,6 +230,7 @@ section
 	margin-bottom: 15px
 
 .resume_content_item_title
+	+kerning(1)
 	.job
 		font-style: italic
 	.position		
@@ -299,6 +240,7 @@ section
 .resume_content_col_left
 	.resume_content_item_title .position
 		margin-left: 10px
+
 .resume_content_col_right
 	.resume_content_item_title .position
 		margin-right: 10px
@@ -308,10 +250,9 @@ section
 	&:last-child
 		margin-bottom: 0
 
+///////////////////// SECTION PORTFOLIO /////////////////////////
+
 .portfolio_controls
-	margin: 0
-	padding: 0
-	list-style-type: none
 	margin-bottom: 50px
 	text-align: center
 
@@ -321,6 +262,7 @@ section
 	font-size: 12px
 	text-transform: uppercase
 	line-height: 2
+	+kerning(2)
 	cursor: pointer
 
 .portfolio_item
@@ -348,6 +290,7 @@ section
 		text-transform: uppercase
 		font-size: 12px
 		font-weight: 400
+		+kerning(3)
 	a
 		display: inline-block
 		border: 1px solid #fff
@@ -371,6 +314,8 @@ section
 		width: 100%
 		margin-top: 10px
 
+///////////////////// SECTION CONTACTS /////////////////////////
+
 .contacts_content_box
 	text-align: left
 	margin-bottom: 30px
@@ -384,18 +329,19 @@ section
 	color: #000
 	text-transform: uppercase
 	font-weight: 400
+	+kerning(3)
 
 .contacts_content_descr
 	margin-top: 5px
 
-.form-group
-	display: block
-	margin-bottom: 20px
-	.color_element
-		font-weight: 700
-		font-size: 18px
-
-.main_form
+.contacts_form
+	.form-group
+		display: block
+		margin-bottom: 20px
+		+kerning(2)
+		.color_element
+			font-weight: 700
+			font-size: 18px
 	input,
 	textarea
 		display: block
@@ -404,6 +350,7 @@ section
 		font-size: 12px
 		line-height: 40px
 		text-indent: 12px
+		+kerning(2)
 		border: 1px solid #ccc
 		background-color: transparent
 	button
@@ -412,24 +359,24 @@ section
 		line-height: 40px
 		padding: 0 25px
 		font-size: 13px
+		+kerning(2)
 		text-transform: uppercase
 		font-weight: 600
 		margin-top: 10px
 		float: right
+	.text_danger
+		font-size: 11px
+		margin-top: 5px
+		display: block
 
-.text_danger
-	font-size: 11px
-	margin-top: 5px
-	display: block
+
+///////////////////// FOOTER /////////////////////////
 
 .footer
 	padding: 50px 0
 	font-size: 13px
 	font-weight: 300
-	.section_about_social_btns_ul
+	.social_buttons
 		margin: 0
 		float: right
 		line-height: 0
-
-
-

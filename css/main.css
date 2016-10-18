@@ -1,3 +1,9 @@
+ul,
+li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0; }
+
 body {
   font-family: "Raleway", sans-serif;
   font-weight: normal;
@@ -14,17 +20,6 @@ body textarea:focus:required:invalid {
 body input:required:valid,
 body textarea:required:valid {
   color: green; }
-
-.hidden {
-  display: none; }
-
-section,
-.main_head {
-  position: relative; }
-
-.main_head {
-  min-height: 480px;
-  padding-top: 20px; }
 
 .loader {
   background: none repeat scroll 0 0 #ffffff;
@@ -50,16 +45,7 @@ section,
     margin-top: -32px;
     margin-left: -32px; }
 
-.logo_container {
-  float: left; }
-
-svg {
-  height: 60px;
-  width: 60px;
-  position: relative;
-  z-index: 10; }
-
-.toggle_mnu {
+.button_menu {
   position: fixed;
   width: 60px;
   height: 60px;
@@ -68,109 +54,55 @@ svg {
   z-index: 100;
   border: none; }
 
-.sandwich {
-  width: 34px;
-  height: 34px;
-  position: absolute;
-  top: 12px;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  z-index: 200;
-  display: block; }
-  .sandwich > span {
-    display: block; }
-
-.sw-topper {
-  position: relative;
-  top: 0;
-  width: 34px;
-  height: 3px;
-  background: white;
-  border: none;
-  border-radius: 4px 4px 4px 4px;
-  transition: transform 0.5s, top 0.2s; }
-
-/* transition-delay: 0.2s, 0s */
-.sw-bottom {
-  position: relative;
-  width: 34px;
-  height: 3px;
-  top: 6px;
-  background: white;
-  border: none;
-  border-radius: 4px 4px 4px 4px;
-  transition: transform 0.5s, top 0.2s;
-  transition-delay: 0.2s, 0s; }
-
-.sw-footer {
-  position: relative;
-  width: 34px;
-  height: 3px;
-  top: 12px;
-  background: white;
-  border: none;
-  border-radius: 4px 4px 4px 4px;
-  transition: all 0.5s;
-  transition-delay: 0.1s; }
-
-.sandwich.active .sw-topper {
-  top: 10px;
-  transform: rotate(140deg); }
-.sandwich.active .sw-bottom {
-  top: 7px;
-  transform: rotate(-140deg); }
-.sandwich.active .sw-footer {
-  opacity: 0;
-  top: 0;
-  transform: rotate(180deg); }
-
-.top_mnu {
+.main_menu {
   position: fixed;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.85);
   z-index: 50;
   right: 0;
   top: 0;
   display: none; }
-  .top_mnu ul,
-  .top_mnu li {
-    list-style-type: none;
-    padding: 0;
-    margin: 0; }
-  .top_mnu ul {
+  .main_menu ul {
     margin-top: 160px;
     text-align: center; }
-    .top_mnu ul a {
-      color: #fff;
+    .main_menu ul a {
       display: block;
       padding: 20px 0 21px 0;
       text-transform: uppercase;
-      font-size: 12px; }
+      font-size: 12px;
+      letter-spacing: 4px; }
 
-.header_name_table {
+.header {
+  position: relative;
+  height: 100vh;
+  min-height: 480px; }
+
+.header_logo_container {
+  float: left;
+  margin: 20px 0 0 20px; }
+  .header_logo_container svg {
+    height: 60px;
+    width: 60px; }
+
+.header_title_table {
   display: table;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  z-index: 10; }
-  .header_name_table .header_name_cell {
+  height: 100%; }
+  .header_title_table .header_title_cell {
     display: table-cell;
     text-align: center;
     vertical-align: middle; }
 
-.header_name_container {
+.header_title_container {
   display: inline-block;
   -webkit-transition: all, 1s, ease;
   -moz-transition: all, 1s, ease;
   transition: all, 1s, ease; }
-  .header_name_container h1 {
+  .header_title_container .header_title_name {
     display: inline-block;
-    color: #fff;
     font-size: 2.8em;
     font-weight: bold;
     text-transform: uppercase;
@@ -178,18 +110,19 @@ svg {
     margin-left: 20px;
     margin-right: 20px;
     border: 8px solid #fff;
-    background-color: rgba(0, 0, 0, 0.1);
     -webkit-animation-delay: 0.5s;
     -moz-animation-delay: 0.5s;
     animation-delay: 0.5s; }
-  .header_name_container p {
+  .header_title_container .header_title_descr {
     margin: 0;
     text-transform: uppercase;
+    letter-spacing: 5px;
     -webkit-animation-delay: 1s;
     -moz-animation-delay: 1s;
     animation-delay: 1s; }
 
 section {
+  position: relative;
   padding: 70px 0 90px; }
 
 .section_header {
@@ -198,6 +131,7 @@ section {
 .section_header_title {
   font-size: 24px;
   text-transform: uppercase;
+  letter-spacing: 1px;
   margin: 0 0 15px; }
 
 .section_header_descr {
@@ -206,6 +140,7 @@ section {
   font-size: 12px;
   text-transform: uppercase;
   font-weight: 600;
+  letter-spacing: 4px;
   margin-bottom: 130px; }
   .section_header_descr:after {
     content: "";
@@ -222,7 +157,8 @@ section {
   text-align: center;
   font-size: 12px;
   text-transform: uppercase;
-  font-weight: 400; }
+  font-weight: 400;
+  letter-spacing: 3px; }
 
 .section_about_photo_wrapper {
   text-align: center;
@@ -233,32 +169,25 @@ section {
   max-width: 220px;
   border-radius: 50%; }
 
-.section_about p {
+.section_about_left_col p {
   margin-bottom: 25px; }
 
 .section_about_name {
   font-size: 13px;
   text-transform: uppercase;
+  letter-spacing: 2px;
   text-align: left;
-  margin: 0 0 30px;
-  color: #555; }
-
-.section_about_personal_info_ul,
-.section_about_social_btns_ul {
-  margin: 0;
-  padding: 0;
-  list-style-type: none; }
+  margin: 0 0 30px; }
 
 .section_about_personal_info_ul li {
   margin-bottom: 10px; }
 
-.section_about_social_btns_ul {
+.social_buttons {
   margin-top: 25px; }
-
-.section_about_social_btns_ul li {
-  display: inline-block;
-  font-size: 20px;
-  padding: 0 3px; }
+  .social_buttons li {
+    display: inline-block;
+    font-size: 20px;
+    padding: 0 3px; }
 
 .resume_content_col_left {
   text-align: right;
@@ -271,6 +200,7 @@ section {
   font-size: 16px;
   font-weight: 600;
   text-transform: uppercase;
+  letter-spacing: 1px;
   margin: 30px 0 35px 0; }
 
 .resume_content_icon {
@@ -289,11 +219,13 @@ section {
   padding: 0 15px;
   margin-bottom: 15px; }
 
-.resume_content_item_title .job {
-  font-style: italic; }
-.resume_content_item_title .position {
-  font-weight: 600;
-  text-transform: uppercase; }
+.resume_content_item_title {
+  letter-spacing: 1px; }
+  .resume_content_item_title .job {
+    font-style: italic; }
+  .resume_content_item_title .position {
+    font-weight: 600;
+    text-transform: uppercase; }
 
 .resume_content_col_left .resume_content_item_title .position {
   margin-left: 10px; }
@@ -307,9 +239,6 @@ section {
     margin-bottom: 0; }
 
 .portfolio_controls {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
   margin-bottom: 50px;
   text-align: center; }
 
@@ -319,6 +248,7 @@ section {
   font-size: 12px;
   text-transform: uppercase;
   line-height: 2;
+  letter-spacing: 2px;
   cursor: pointer; }
 
 .portfolio_item {
@@ -347,7 +277,8 @@ section {
     margin: 0;
     text-transform: uppercase;
     font-size: 12px;
-    font-weight: 400; }
+    font-weight: 400;
+    letter-spacing: 3px; }
   .portfolio_item_overlay a {
     display: inline-block;
     border: 1px solid #fff;
@@ -383,40 +314,42 @@ section {
   font-size: 14px;
   color: #000;
   text-transform: uppercase;
-  font-weight: 400; }
+  font-weight: 400;
+  letter-spacing: 3px; }
 
 .contacts_content_descr {
   margin-top: 5px; }
 
-.form-group {
+.contacts_form .form-group {
   display: block;
-  margin-bottom: 20px; }
-  .form-group .color_element {
+  margin-bottom: 20px;
+  letter-spacing: 2px; }
+  .contacts_form .form-group .color_element {
     font-weight: 700;
     font-size: 18px; }
-
-.main_form input,
-.main_form textarea {
+.contacts_form input,
+.contacts_form textarea {
   display: block;
   margin-top: 5px;
   width: 100%;
   font-size: 12px;
   line-height: 40px;
   text-indent: 12px;
+  letter-spacing: 2px;
   border: 1px solid #ccc;
   background-color: transparent; }
-.main_form button {
+.contacts_form button {
   border: none;
   color: #fff;
   line-height: 40px;
   padding: 0 25px;
   font-size: 13px;
+  letter-spacing: 2px;
   text-transform: uppercase;
   font-weight: 600;
   margin-top: 10px;
   float: right; }
-
-.text_danger {
+.contacts_form .text_danger {
   font-size: 11px;
   margin-top: 5px;
   display: block; }
@@ -425,7 +358,7 @@ section {
   padding: 50px 0;
   font-size: 13px;
   font-weight: 300; }
-  .footer .section_about_social_btns_ul {
+  .footer .social_buttons {
     margin: 0;
     float: right;
     line-height: 0; }
